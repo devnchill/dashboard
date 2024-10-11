@@ -56,7 +56,29 @@ body {
   grid-row: span 2;
   background-color: blue;
 }
-.top {
+.sidebar-top {
+  padding: 1vw;
+  display: flex;
+  gap: 1vw;
+  justify-content: start;
+}
+.sidebar-top > div:first-child {
+  background: url("assets/svg/view-dashboard.svg");
+  width: 5vw;
+  height: 5vw;
+  max-height: 4rem;
+  max-width: 4rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.sidebar-top > div:nth-child(2) {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.top-bar {
   grid-column: 2/4;
   background-color: grey;
 }
