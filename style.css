@@ -52,11 +52,13 @@ body {
   height: 100%;
   background-color: pink;
 }
+/*------------------Sidebar Css---------------------------*/
 .sidebar {
   grid-row: span 2;
   background-color: blue;
   display: grid;
-  grid-template-rows: 0.5fr 3fr 1.5fr;
+  grid-template-rows: 1fr 5fr 3fr;
+  gap: 50px;
 }
 .sidebar-top {
   display: flex;
@@ -73,6 +75,22 @@ body {
   max-height: 4rem;
   object-fit: contain;
 }
+.sidebar-features {
+  font-size: calc(0.2rem + 1vw);
+  font-weight: 800;
+}
+.sidebar-features div {
+  padding: 0 20px;
+  font-size: 1.5rem;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.sidebar-features div > img {
+  width: 2vw;
+  height: 2vw;
+}
+/*-----------------------------------------------------------------*/
 .top-bar {
   grid-column: 2/4;
   background-color: grey;
