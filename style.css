@@ -57,7 +57,7 @@ body {
   grid-row: span 2;
   background-color: blue;
   display: grid;
-  grid-template-rows: 1fr 5fr 3fr;
+  grid-template-rows: 1fr 1fr 3fr;
   gap: 50px;
 }
 .sidebar-top {
@@ -75,18 +75,21 @@ body {
   max-height: 4rem;
   object-fit: contain;
 }
-.sidebar-features {
+.sidebar-features,
+.sidebar-help {
   font-size: calc(0.2rem + 1vw);
   font-weight: 800;
 }
-.sidebar-features div {
+.sidebar-features div,
+.sidebar-help div {
   padding: 0 20px;
   font-size: 1.5rem;
   display: flex;
   gap: 20px;
   align-items: center;
 }
-.sidebar-features div > img {
+.sidebar-features div > img,
+.sidebar-help div > img {
   width: 2vw;
   height: 2vw;
 }
