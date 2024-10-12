@@ -55,29 +55,24 @@ body {
 .sidebar {
   grid-row: span 2;
   background-color: blue;
+  display: grid;
+  grid-template-rows: 0.5fr 3fr 1.5fr;
 }
 .sidebar-top {
-  padding: 1vw;
   display: flex;
-  gap: 1vw;
+  gap: 5%;
   justify-content: start;
+  padding: 0 max(10px, 1%);
+  align-items: center;
+  font-size: calc(0.5rem + 1vw);
 }
-.sidebar-top > div:first-child {
-  background: url("assets/svg/view-dashboard.svg");
+.sidebar-top > div {
   width: 5vw;
   height: 5vw;
-  max-height: 4rem;
   max-width: 4rem;
-  background-size: contain;
-  background-repeat: no-repeat;
+  max-height: 4rem;
+  object-fit: contain;
 }
-.sidebar-top > div:nth-child(2) {
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
-
 .top-bar {
   grid-column: 2/4;
   background-color: grey;
