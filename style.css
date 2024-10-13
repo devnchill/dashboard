@@ -48,7 +48,7 @@ body {
 }
 .dashboard {
   display: grid;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 9fr;
   grid-template-columns: 1fr 3fr 1fr;
   height: 100%;
   background-color: pink;
@@ -96,6 +96,62 @@ body {
 .top-bar {
   grid-column: 2/4;
   background-color: grey;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.first-bar {
+  padding: 5px;
+  background-color: black;
+  display: flex;
+  gap: 3vw;
+  justify-content: space-between;
+  color: white;
+}
+.first-bar input {
+  border-radius: 15px;
+  width: 100%;
+}
+.search,
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px calc(5px + 2vw);
+  gap: 2vw;
+}
+.search {
+  flex: 1;
+}
+.second-bar {
+  background-color: purple;
+  display: flex;
+  justify-content: space-between;
+}
+.profile {
+  min-width: 30%;
+  gap: 5%;
+  display: flex;
+  justify-content: flex-end;
+}
+.flexcol {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.flexcol p:last-child {
+  white-space: nowrap;
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+nav {
+  min-width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+nav > button {
+  border-radius: 10px;
+  padding: 1% 5%;
 }
 .extra {
   grid-row: 2/3;
