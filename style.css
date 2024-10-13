@@ -58,7 +58,7 @@ body {
   background-color: blue;
   display: grid;
   grid-template-rows: 1fr 1fr 3fr;
-  gap: 50px;
+  gap: calc(2vw + 10px);
 }
 .sidebar-top {
   display: flex;
@@ -77,13 +77,12 @@ body {
 }
 .sidebar-features,
 .sidebar-help {
-  font-size: calc(0.2rem + 1vw);
+  font-size: calc(0.5rem + 1vw);
   font-weight: 800;
 }
 .sidebar-features div,
 .sidebar-help div {
   padding: 0 20px;
-  font-size: 1.5rem;
   display: flex;
   gap: 20px;
   align-items: center;
