@@ -119,40 +119,16 @@ body {
   padding: 15px calc(5px + 2vw);
   gap: 2vw;
 }
+.avatar > img + img {
+  width: 2vw;
+  height: 2vw;
+}
 .search {
   flex: 1;
 }
 .second-bar {
-  /*background-color: purple;*/
   display: flex;
   justify-content: space-between;
-}
-.profile {
-  min-width: 30%;
-  gap: 5%;
-  display: flex;
-  justify-content: flex-end;
-}
-.flexcol {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-.flexcol p:last-child {
-  white-space: nowrap;
-  font-weight: 800;
-  font-size: 1.8rem;
-}
-nav {
-  min-width: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-nav > button {
-  cursor: pointer;
-  border-radius: 10px;
-  padding: 1% 5%;
 }
 .extra {
   grid-row: 2/3;
