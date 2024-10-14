@@ -103,7 +103,7 @@ body {
   padding: 5px;
   display: flex;
   gap: 3vw;
-  justify-content: space-between;
+  justify-content: space-around;
   color: white;
 }
 .first-bar input {
@@ -140,9 +140,10 @@ body {
 .second-bar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
 }
 .second-bar > div {
+  padding: 0 3%;
   display: flex;
   gap: 1vw;
   align-items: center;
@@ -164,6 +165,16 @@ body {
 .second-bar p + p {
   font-size: calc(1rem + 0.5vw);
   font-weight: 800;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.navbar button {
+  border-radius: 8px;
+  width: max(50px, 5vw);
 }
 .extra {
   grid-row: 2/3;
