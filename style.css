@@ -168,18 +168,21 @@ body {
 }
 .navbar {
   display: flex;
-  min-width: 58%;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   gap: 10px;
 }
 .navbar button {
   border-radius: 8px;
   width: max(50px, 5vw);
+  height: max(20px, 2vw);
 }
 .extra {
+  padding: 5%;
   grid-row: 2/3;
   grid-column: 3/4;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
   background-color: red;
 }
 .projects {
@@ -211,4 +214,13 @@ body {
   height: 1.2vw;
   width: 1.2vw;
   cursor: pointer;
+}
+.announcement {
+  outline: 2px solid black;
+  display: grid;
+  grid-template-rows: 1fr 9fr;
+}
+.announcement > p {
+  font-weight: 900;
+  font-size: 1.5rem;
 }
