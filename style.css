@@ -44,7 +44,25 @@ h6 {
 /*-------------------My Css---------------------------*/
 html,
 body {
-  background-color: black;
+  --color: rgba(78, 76, 76, 30%);
+  background-color: #212222;
+  background-image: url("assets/img/bg.png"),
+    linear-gradient(
+      0deg,
+      transparent 24%,
+      var(--color) 25%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
+    );
+  background-size:
+    cover,
+    55px 55px;
+  background-blend-mode: multiply;
   color: rgb(0, 170, 0);
   height: 100%;
 }
@@ -60,6 +78,7 @@ body {
   display: grid;
   grid-template-rows: 1fr 1fr 9fr;
   gap: calc(2vw + 10px);
+  background-color: black;
 }
 .sidebar-top {
   cursor: pointer;
@@ -183,13 +202,13 @@ body {
   display: flex;
   align-items: center;
   grid-column: 2/4;
-  padding: 0 2%;
+  padding: 0 1%;
   font-weight: 900;
   font-size: calc(1rem + 0.5vw);
   justify-content: space-between;
 }
 .row2 > div + div {
-  flex-basis: 23%;
+  flex-basis: 24%;
 }
 .extra {
   padding: 5%;
@@ -212,6 +231,7 @@ body {
   gap: 2%;
 }
 .projects-grid > div {
+  background-color: black;
   border: 2px solid rgb(0, 170, 0);
   border-radius: 5px;
   display: flex;
@@ -231,6 +251,7 @@ body {
   cursor: pointer;
 }
 .trending {
+  padding-top: 10px;
   gap: 2%;
   display: grid;
   grid-row: auto 1fr;
@@ -258,6 +279,15 @@ button {
   color: rgb(0, 170, 0);
   border: 2px solid rgb(0, 170, 0);
 }
+input:hover {
+  border: 2px solid black;
+  background-color: rgb(0, 170, 0);
+  color: black;
+}
+button:hover {
+  background-color: rgb(0, 170, 0);
+  color: black;
+}
 .coloredline {
   height: 100%;
   width: 15%;
@@ -268,4 +298,11 @@ button {
 }
 .projects-grid > div:hover {
   background-color: rgba(0, 170, 0, 10%);
+}
+.sidebar-top:hover,
+.sidebar-help > div:hover,
+.sidebar-features > div:hover {
+  cursor: pointer;
+  color: black;
+  background-color: rgb(0, 170, 0);
 }
