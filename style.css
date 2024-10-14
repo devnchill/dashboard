@@ -101,7 +101,6 @@ body {
 }
 .first-bar {
   padding: 5px;
-  /*background-color: black;*/
   display: flex;
   gap: 3vw;
   justify-content: space-between;
@@ -109,7 +108,11 @@ body {
 }
 .first-bar input {
   border-radius: 15px;
+  flex: 1;
   width: 100%;
+  height: auto;
+  font-size: calc(0.5rem + 0.5vw);
+  max-height: 3vw;
 }
 .search,
 .avatar {
@@ -120,8 +123,16 @@ body {
   gap: 2vw;
 }
 .avatar > img + img {
-  width: 2vw;
-  height: 2vw;
+  width: 2.5vw;
+  height: 2.5vw;
+}
+.avatar > h2 {
+  font-size: calc(0.5rem + 0.8vw);
+}
+.avatar > img,
+.search > img {
+  width: 1.5vw;
+  height: 1.5vw;
 }
 .search {
   flex: 1;
@@ -129,6 +140,30 @@ body {
 .second-bar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.second-bar > div {
+  display: flex;
+  gap: 1vw;
+  align-items: center;
+  text-wrap: nowrap;
+}
+.second-bar > div > img {
+  width: max(5vw, 50%);
+  height: max(4vw, 40px);
+}
+.second-bar > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 0;
+}
+.second-bar > div > p {
+  font-size: calc(0.5rem + 0.5vw);
+}
+.second-bar p + p {
+  font-size: calc(1rem + 0.5vw);
+  font-weight: 800;
 }
 .extra {
   grid-row: 2/3;
