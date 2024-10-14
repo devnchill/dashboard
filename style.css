@@ -181,6 +181,9 @@ body {
   display: flex;
   grid-column: 2/4;
   grid-row: 2/3;
+  padding: 1%;
+  font-weight: 900;
+  font-size: calc(1rem + 0.5vw);
   justify-content: space-between;
   background-color: orange;
 }
@@ -188,13 +191,16 @@ body {
   flex-basis: 25%;
 }
 .extra {
+  padding: 5%;
   grid-row: 3/4;
+  gap: 5%;
   grid-column: 3/4;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 45% 1fr;
   background-color: red;
 }
 .projects {
+  padding: 1%;
   grid-row: 3/4;
   grid-column: 2/3;
   background-color: yellow;
@@ -225,17 +231,15 @@ body {
   width: 1.2vw;
   cursor: pointer;
 }
-.announcement {
-  outline: 2px solid black;
-  display: grid;
-  grid-template-rows: 1fr;
-}
 .trending {
-  display: grid;
-  grid-row: auto auto;
-}
-.status {
+  gap: 2%;
   outline: 2px solid white;
+  display: grid;
+  grid-row: auto 1fr;
+}
+.trending > p {
+  font-size: calc(1rem + 0.5vw);
+  font-weight: 900;
 }
 .people {
   display: flex;
