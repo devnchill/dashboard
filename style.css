@@ -216,7 +216,7 @@ body {
   gap: 5%;
   grid-column: 3/4;
   display: grid;
-  grid-template-rows: 45% 1fr;
+  grid-template-rows: auto 1fr;
 }
 .projects {
   padding: 1%;
@@ -251,7 +251,6 @@ body {
   cursor: pointer;
 }
 .trending {
-  padding-top: 10px;
   gap: 2%;
   display: grid;
   grid-row: auto 1fr;
