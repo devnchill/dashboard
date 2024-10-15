@@ -173,14 +173,16 @@ body {
 }
 .second-bar > div > img,
 .top-bar img,
-.people > img {
+.people > img,
+.glyphs img {
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
 .people > img:hover,
 .top-bar img:hover,
-.avatar > img:hover {
+.avatar > img:hover,
+.glyphs img:hover {
   transform: scale(1.1);
   box-shadow: 0 4px 15px rgba(0, 170, 0, 0.5);
 }
@@ -367,6 +369,7 @@ body {
     box-shadow 0.3s ease;
   cursor: pointer;
   display: grid;
+  grid-template-rows: auto;
   gap: 5%;
 }
 .status:hover {
