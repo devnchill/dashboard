@@ -1,3 +1,22 @@
+@font-face {
+  font-family: "spacegrotesk";
+  src:
+    url("assets/fonts/spacegrateek/spacegrotesk-variablefont_wght-webfont.woff2")
+      format("woff2"),
+    url("assets/fonts/spacegrateek/spacegrotesk-variablefont_wght-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "handleeregular";
+  src:
+    url("assets/fonts/handlee/handlee-regular-webfont.woff2") format("woff2"),
+    url("assets/fonts/handlee/handlee-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 *,
 *::before,
 *::after {
@@ -17,7 +36,7 @@ picture,
 video,
 canvas,
 svg {
-  cursor:pointer;
+  cursor: pointer;
   display: block;
   max-width: 100%;
 }
@@ -152,11 +171,28 @@ body {
   padding: 15px calc(5px + 2vw);
   gap: 2vw;
 }
+.second-bar > div > img,
+.top-bar img,
+.people > img {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.people > img:hover,
+.top-bar img:hover,
+.avatar > img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 170, 0, 0.5);
+}
 .avatar > img + img {
   width: 2.5vw;
   height: 2.5vw;
 }
 .avatar > h2 {
+  text-shadow:
+    0 0 3px #00ff00,
+    0 0 1px #00ff00;
+  color: rgb(0, 170, 0);
   font-size: calc(0.5rem + 0.8vw);
 }
 .avatar > img,
@@ -208,6 +244,7 @@ body {
   gap: 10px;
 }
 .navbar button {
+  font-size: calc(1rem - 15%);
   border-radius: 8px;
   width: max(50px, 5vw);
   height: max(20px, 2vw);
@@ -221,16 +258,12 @@ body {
   font-size: calc(1rem + 0.5vw);
   justify-content: space-between;
 }
-.row2 > div {
+.row2 {
   text-shadow:
     0 0 3px #00ff00,
     0 0 1px #00ff00;
 }
 .row2 > div + div {
-  text-shadow:
-    0 0 3px #00ff00,
-    0 0 1px #00ff00;
-
   flex-basis: 24%;
 }
 .extra {
@@ -240,6 +273,28 @@ body {
   grid-column: 3/4;
   display: grid;
   grid-template-rows: auto 1fr;
+}
+.info {
+  display: grid;
+  padding-left: 10px;
+  grid-template-rows: auto auto auto;
+  gap: 5px;
+  border-radius: 10px;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  background-color: black;
+}
+.info:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+.info > h4 {
+  font-size: 2rem;
+}
+.info > div {
+  padding: 5px;
 }
 .projects {
   padding: 1%;
@@ -303,8 +358,21 @@ body {
   height: 3vw;
 }
 .status {
+  background-color: black;
+  padding: 10px;
+  border-radius: 10px;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
   display: grid;
   gap: 5%;
+}
+.status:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 50%);
 }
 img[src^="assets/icons/"] {
   filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg)
@@ -327,8 +395,8 @@ input:hover {
   color: black;
 }
 button:hover {
-  transform: scale(1.05); /* Slightly enlarge on hover */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 30%);
   background-color: rgb(0, 170, 0);
   color: black;
 }
@@ -336,8 +404,6 @@ button:hover {
   height: 100%;
   width: 15%;
   border: 2px solid rgb(0, 170, 0);
-}
-.coloredline {
   background-color: rgb(0, 170, 0);
 }
 .projects-grid > div:hover {
@@ -356,4 +422,14 @@ button:hover {
   cursor: pointer;
   color: black;
   background-color: rgb(0, 170, 0);
+}
+body {
+  font-family: handlee, Arial, Helvetica, sans-serif;
+}
+.sidebar,
+.second-bar,
+.row2,
+.trending > p,
+.projects-grid > div > p {
+  font-family: spacegrotesk, Arial, Helvetica, sans-serif;
 }
