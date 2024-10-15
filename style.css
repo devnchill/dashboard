@@ -10,7 +10,7 @@
 }
 
 @font-face {
-  font-family: "handleeregular";
+  font-family: "handleregular";
   src:
     url("assets/fonts/handlee/handlee-regular-webfont.woff2") format("woff2"),
     url("assets/fonts/handlee/handlee-regular-webfont.woff") format("woff");
@@ -274,7 +274,7 @@ body {
   gap: 5%;
   grid-column: 3/4;
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto auto;
 }
 .info {
   display: grid;
@@ -321,7 +321,7 @@ body {
   display: flex;
 }
 .projects-grid > div p {
-  font-family: spacegrateek, Arial, Helvetica, sans-serif;
+  font-family: spacegrotest, Arial, Helvetica, sans-serif;
   font-weight: 800;
 }
 .projects-grid > div > div + div {
@@ -339,6 +339,9 @@ body {
   height: 1.2vw;
   width: 1.2vw;
   cursor: pointer;
+}
+.para {
+  font-family: spacegrotesk, Arial, Helvetica, sans-serif;
 }
 .trending {
   gap: 2%;
@@ -370,7 +373,7 @@ body {
     box-shadow 0.3s ease;
   cursor: pointer;
   display: grid;
-  grid-template-rows: auto;
+  grid-template-rows: 1fr;
   gap: 5%;
 }
 .status:hover {
@@ -410,6 +413,9 @@ button:hover {
   border: 2px solid rgb(0, 170, 0);
   background-color: rgb(0, 170, 0);
 }
+.projects-grid > div > div > p {
+  font-family: handleregular, sans-serif;
+}
 .projects-grid > div:hover {
   cursor: pointer;
   transform: translateY(-5px);
@@ -428,12 +434,18 @@ button:hover {
   background-color: rgb(0, 170, 0);
 }
 body {
-  font-family: handlee, Arial, Helvetica, sans-serif;
+  font-family: handleregular, Arial, Helvetica, sans-serif;
 }
 .sidebar,
 .second-bar,
 .row2,
 .trending > p,
 .projects-grid > div > p {
-  font-family: spacegrotesk, Arial, Helvetica, sans-serif;
+  font-family: handleregular, Arial, Helvetica, sans-serif;
+}
+.people > div > p + p,
+.para,
+.info > div > div {
+  font-family: "spacegrotesk", sans-serif;
+  color: white;
 }
