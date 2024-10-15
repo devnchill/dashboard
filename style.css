@@ -353,7 +353,7 @@ body {
   text-shadow:
     0 0 3px #00ff00,
     0 0 1px #00ff00;
-  font-size: calc(1rem + 0.5vw);
+  font-size:1.5rem;
   font-weight: 900;
 }
 .people {
