@@ -231,6 +231,10 @@ body {
   gap: 2%;
 }
 .projects-grid > div {
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   background-color: black;
   border: 2px solid rgb(0, 170, 0);
   border-radius: 5px;
@@ -239,6 +243,9 @@ body {
 }
 .projects-grid > div > p {
   font-weight: 800;
+}
+.projects-grid > div > div + div {
+  padding: 10px;
 }
 .glyphs {
   display: flex;
@@ -277,6 +284,10 @@ img[src^="assets/icons/"] {
   cursor: pointer;
 }
 button {
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   cursor: pointer;
   background-color: black;
   color: rgb(0, 170, 0);
@@ -288,6 +299,8 @@ input:hover {
   color: black;
 }
 button:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
   background-color: rgb(0, 170, 0);
   color: black;
 }
@@ -296,11 +309,18 @@ button:hover {
   width: 15%;
   border: 2px solid rgb(0, 170, 0);
 }
-.coloredline:hover {
+.coloredline {
   background-color: rgb(0, 170, 0);
 }
 .projects-grid > div:hover {
-  background-color: rgba(0, 170, 0, 10%);
+  cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 50%);
+  color: black;
+  background-color: rgb(0, 170, 0);
+}
+.projects-grid > div:hover .coloredline {
+  background-color: black;
 }
 .sidebar-top:hover,
 .sidebar-help > div:hover,
