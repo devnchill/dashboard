@@ -17,6 +17,7 @@ picture,
 video,
 canvas,
 svg {
+  cursor:pointer;
   display: block;
   max-width: 100%;
 }
@@ -81,6 +82,10 @@ body {
   background-color: black;
 }
 .sidebar-top {
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   cursor: pointer;
   display: flex;
   justify-content: start;
@@ -102,6 +107,10 @@ body {
 }
 .sidebar-features div,
 .sidebar-help div {
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   padding: 0 20px;
   display: flex;
   gap: 20px;
@@ -180,12 +189,17 @@ body {
   justify-content: start;
   padding: 0;
 }
-.second-bar > div > p {
-  font-size: calc(0.5rem + 0.5vw);
+.second-bar > div > div > p {
+  text-shadow:
+    0 0 3px #00ff00,
+    0 0 1px #00ff00;
 }
 .second-bar p + p {
   font-size: calc(1rem + 0.5vw);
   font-weight: 800;
+  text-shadow:
+    0 0 3px #00ff00,
+    0 0 1px #00ff00;
 }
 .navbar {
   display: flex;
@@ -207,7 +221,16 @@ body {
   font-size: calc(1rem + 0.5vw);
   justify-content: space-between;
 }
+.row2 > div {
+  text-shadow:
+    0 0 3px #00ff00,
+    0 0 1px #00ff00;
+}
 .row2 > div + div {
+  text-shadow:
+    0 0 3px #00ff00,
+    0 0 1px #00ff00;
+
   flex-basis: 24%;
 }
 .extra {
@@ -239,12 +262,14 @@ body {
   border: 2px solid rgb(0, 170, 0);
   border-radius: 5px;
   display: flex;
-  align-items: stretch;
 }
 .projects-grid > div > p {
   font-weight: 800;
 }
 .projects-grid > div > div + div {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 10px;
   padding: 10px;
 }
 .glyphs {
@@ -263,6 +288,9 @@ body {
   grid-row: auto 1fr;
 }
 .trending > p {
+  text-shadow:
+    0 0 3px #00ff00,
+    0 0 1px #00ff00;
   font-size: calc(1rem + 0.5vw);
   font-weight: 900;
 }
@@ -316,8 +344,6 @@ button:hover {
   cursor: pointer;
   transform: translateY(-5px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 50%);
-  color: black;
-  background-color: rgb(0, 170, 0);
 }
 .projects-grid > div:hover .coloredline {
   background-color: black;
@@ -325,6 +351,8 @@ button:hover {
 .sidebar-top:hover,
 .sidebar-help > div:hover,
 .sidebar-features > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 50%);
   cursor: pointer;
   color: black;
   background-color: rgb(0, 170, 0);
