@@ -320,7 +320,8 @@ body {
   border-radius: 5px;
   display: flex;
 }
-.projects-grid > div > p {
+.projects-grid > div p {
+  font-family: spacegrateek, Arial, Helvetica, sans-serif;
   font-weight: 800;
 }
 .projects-grid > div > div + div {
