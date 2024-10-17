@@ -7,15 +7,21 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!--Making a container for my dashboard which will have display flex with 3 columns and 3 rows-->
     <div class="dashboard">
+      <!--Sidebar will take first column and span across all rows -->
       <section class="sidebar">
+        <!--sidebar will be further divided into 3 rows using grid-->
+        <!--This is 1st row of sidebar which will contain heading "DASHBOARD" here -->
         <div class="sidebar-top">
           <div>
             <img src="assets/icons/view-dashboard.svg" alt="dashboard-logo" />
           </div>
           <h1>Dashboard</h1>
         </div>
+        <!--This is second row of sidebar which will be containing different features , it is given display grid for proper alignment of each feature-->
         <div class="sidebar-features">
+          <!--each feature is given a display flex so that icon and their p tag align properly in same row -->
           <div>
             <img src="assets/icons/home.svg" alt="home" />
             <p>Home</p>
@@ -41,6 +47,8 @@
             <p>Communities</p>
           </div>
         </div>
+        <!--This is the last row of sidebar (3rd one)-->
+        <!--It is structured same as sidebar features(it's children have display flex)-->
         <div class="sidebar-help">
           <div>
             <img src="assets/icons/cog.svg" alt="Settings" />
@@ -56,7 +64,10 @@
           </div>
         </div>
       </section>
+      <!--This takes the first row and spans from 2nd col to the end with display grid-->
       <section class="top-bar">
+        <!--It's further divided into 2 rows with display grid-->
+        <!--This is first row which is given display flex-->
         <div class="first-bar">
           <div class="search">
             <img src="assets/icons/search.svg" alt="search" />
@@ -73,7 +84,9 @@
             <h2>Gojo</h2>
           </div>
         </div>
+        <!--This is second row , it's given display flex as well-->
         <div class="second-bar">
+          <!--It's further divided into 2 div with display flex (one for logo and it's info , other for navbar)-->
           <div>
             <a
               href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
@@ -93,17 +106,26 @@
           </div>
         </div>
       </section>
+      <!--This is the thrid row  and 2nd column, it contains all projects card , given display grid-->
       <section class="projects">
+        <!--This is where project cards are it's children , it's given display grid with autofit so that it becomes responsive-->
         <div class="projects-grid">
+          <!--Each direct div are project cards with display grid-->
           <div>
-            <div class="coloredline"></div>
+            <!--Empty div so that it changes it color when hover, takes almost 10-20% of project card just for design purpose-->
+            <div class="coloreddiv"></div>
             <div>
+              <!--Each card is further divided into 3rows (p for name of project, div for info about project last one for storing glyphs)-->
+              <!--This is first row-->
               <p>Landing Page</p>
+              <!--This is second row-->
               <div class="para">
                 A simple personal landing page made to practice my flexbox
                 skills . It's the first one of The Odin Project.
               </div>
+              <!--This is third row-->
               <div class="glyphs">
+                <!--Stores all glyphs (svg) with display flex-->
                 <a
                   href="https://github.com/devnchill/Landing-Page"
                   target="_blank"
@@ -120,8 +142,9 @@
               </div>
             </div>
           </div>
+          <!--Second project card-->
           <div>
-            <div class="coloredline"></div>
+            <div class="coloreddiv"></div>
             <div>
               <p>Etch-a-Sketch</p>
               <div class="para">
@@ -148,8 +171,9 @@
               </div>
             </div>
           </div>
+          <!--Third project card-->
           <div>
-            <div class="coloredline"></div>
+            <div class="coloreddiv"></div>
             <div>
               <p>Rock-Paper-Scissor</p>
               <div class="para">
@@ -173,8 +197,9 @@
               </div>
             </div>
           </div>
+          <!--Fourth project card-->
           <div>
-            <div class="coloredline"></div>
+            <div class="coloreddiv"></div>
             <div>
               <p>Sign-up-form</p>
               <div class="para">
@@ -198,8 +223,9 @@
               </div>
             </div>
           </div>
+          <!--FIfth project card-->
           <div>
-            <div class="coloredline"></div>
+            <div class="coloreddiv"></div>
             <div>
               <p>Lisp In c</p>
               <div class="para">
@@ -215,8 +241,9 @@
               </div>
             </div>
           </div>
+          <!--Sixth project card-->
           <div>
-            <div class="coloredline"></div>
+            <div class="coloreddiv"></div>
             <div>
               <p>Port Scanner</p>
               <div class="para">
@@ -235,8 +262,9 @@
               </div>
             </div>
           </div>
+          <!--Seventh project card-->
           <div>
-            <div class="coloredline"></div>
+            <div class="coloreddiv"></div>
             <div>
               <p>Gamble</p>
               <div class="para">
@@ -254,8 +282,9 @@
               </div>
             </div>
           </div>
+          <!--Eigth project card-->
           <div>
-            <div class="coloredline"></div>
+            <div class="coloreddiv"></div>
             <div>
               <p>Calculator</p>
               <div class="para">
@@ -279,8 +308,9 @@
               </div>
             </div>
           </div>
+          <!--Nineth project card-->
           <div>
-            <div class="coloredline"></div>
+            <div class="coloreddiv"></div>
             <div>
               <p>Odin Recipes</p>
               <div class="para">Some of my favourite recipes to try.</div>
@@ -301,8 +331,9 @@
               </div>
             </div>
           </div>
+          <!-- Tenth project card-->
           <div>
-            <div class="coloredline"></div>
+            <div class="coloreddiv"></div>
             <div>
               <p>Dotfiles</p>
               <div class="para">My arch linux , nvim and hyprland setup.</div>
@@ -315,8 +346,9 @@
               </div>
             </div>
           </div>
+          <!-- Eleventh project card-->
           <div>
-            <div class="coloredline"></div>
+            <div class="coloreddiv"></div>
             <div>
               <p>Birthday Card</p>
               <div class="para">
@@ -333,13 +365,18 @@
           </div>
         </div>
       </section>
+      <!--As the name suggests this is second row with display flex so that they align on same row perfectly just below top-bar , it spans from 2nd column to the end-->
       <section class="row2">
         <div>Your projects</div>
         <div>Announcement</div>
       </section>
+      <!--This takes last column and spans from 3rd row with display grid -->
       <section class="extra">
+        <!--Divided into 2 parts firsts for nows with display grid-->
         <div class="info">
+          <!--This contains individual div for news-->
           <div>
+            <!--This is what contains news and is further divided into 2 rows (one for heading and other for details regarding that news)-->
             <h3>Internet Archive Down</h3>
             <div>
               Unfortunately , A hacker group did a distributed denial of service
@@ -347,14 +384,18 @@
               Users are advised to change their password.
             </div>
           </div>
+          <!--This contains individual div for news-->
           <div>
+            <!--This is what contains news and is further divided into 2 rows (one for heading and other for details regarding that news)-->
             <h3>Citrix Vulnerability Exploited in DDoS Attacks</h3>
             <div>
               A critical vulnerability in Citrix NetScaler Gateway and ADC with
               the potential to disrupt enterprise networks globally.
             </div>
           </div>
+          <!--This contains individual div for news-->
           <div>
+            <!--This is what contains news and is further divided into 2 rows (one for heading and other for details regarding that news)-->
             <h3>North Korean Hackers Target Crypto Exchanges</h3>
             <div>
               The Lazarus Group, a hacking entity tied to North Korea, has been
@@ -362,10 +403,16 @@
             </div>
           </div>
         </div>
+        <!--This is second row of extra section it contains trending info-->
         <div class="trending">
+          <!--Further divided into 2 rows one for heading other for div which will further store about trending section-->
+          <!--This is 1st row perhaps heading-->
           <p>Trending</p>
+          <!--This is what contains info about trending-->
           <div class="status">
+            <!--Contains div for individual people and their info , separate row for each people with display grid-->
             <div class="people">
+              <!--Each div with class people contains 2 further columns , one for avatar and other for their div which futher contains username and a bit of funny info-->
               <a
                 href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
                 target="_blank"
@@ -403,8 +450,11 @@
               </div>
             </div>
           </div>
+          <!--People's status ends here-->
         </div>
+        <!--Trending section ends here-->
       </section>
+      <!--extra section ends here-->
     </div>
   </body>
 </html>

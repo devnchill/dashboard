@@ -1,3 +1,6 @@
+/*Importing downloaded fonts from assets/fonts directory*/
+/*2 fonts , one for heading (handleregular) and other for info(spacegrotesk)*/
+
 @font-face {
   font-family: "spacegrotesk";
   src:
@@ -17,6 +20,9 @@
   font-weight: normal;
   font-style: normal;
 }
+
+/*Using a css reset to minimize the difference between different browsers */
+/*I copied it , this isn't mine , i forgot the source :(  */
 *,
 *::before,
 *::after {
@@ -61,11 +67,15 @@ h6 {
 #__next {
   isolation: isolate;
 }
+/*Reset ends here now i'll start writing my css*/
 /*-------------------My Css---------------------------*/
 html,
 body {
+  /*variable declaration will be used for color*/
   --color: rgba(78, 76, 76, 30%);
+
   background-color: #212222;
+  /*Using a hacker vibe kind of background as i'm plnanning to give my dashboard a hacker themed*/
   background-image: url("assets/img/bg.png"),
     linear-gradient(
       0deg,
@@ -83,9 +93,12 @@ body {
     cover,
     55px 55px;
   background-blend-mode: multiply;
+  /*greenish kind of color for giving stereotypical hacker interface (black bg with green text)*/
   color: rgb(0, 170, 0);
   height: 100%;
 }
+
+/*dashboard for my css*/
 .dashboard {
   display: grid;
   grid-template-rows: auto auto 1fr;
@@ -100,6 +113,8 @@ body {
   gap: calc(2vw + 10px);
   background-color: black;
 }
+
+/*first row of my sidebar which contains heading "Dashboard" and it's svg*/
 .sidebar-top {
   transition:
     background-color 0.3s ease,
@@ -112,6 +127,7 @@ body {
   align-items: end;
   font-size: calc(0.5rem + 1vw);
 }
+/*Targets dashboard svg*/
 .sidebar-top > div {
   width: 5vw;
   height: 5vw;
@@ -119,11 +135,15 @@ body {
   max-height: 4rem;
   object-fit: contain;
 }
+
+/*Target's 2nd and 3rd row of sidebar*/
 .sidebar-features,
 .sidebar-help {
   font-size: calc(0.5rem + 1vw);
   font-weight: 800;
 }
+
+/*Adding cool animation for sidebar*/
 .sidebar-features div,
 .sidebar-help div {
   transition:
@@ -141,11 +161,15 @@ body {
   height: 2vw;
 }
 /*-----------------------------------------------------------------*/
+
+/*Styling first row of overall dashboard*/
 .top-bar {
   grid-column: 2/4;
   display: grid;
   grid-template-rows: 1fr 1fr;
 }
+
+/*Styling first row of topbar(topbar is topmost row of overall dsahboard)*/
 .first-bar {
   padding: 5px;
   display: flex;
@@ -153,6 +177,8 @@ body {
   justify-content: space-around;
   color: white;
 }
+
+/*styling search input of first row of topbar*/
 .first-bar input {
   background-color: black;
   color: white;
@@ -164,6 +190,8 @@ body {
   font-size: calc(0.5rem + 0.5vw);
   max-height: 3vw;
 }
+
+/*styling search and avatar svg */
 .search,
 .avatar {
   display: flex;
@@ -172,6 +200,8 @@ body {
   padding: 15px calc(5px + 2vw);
   gap: 2vw;
 }
+
+/*grouping all svgs for which i wan't the animation could be repetition */
 .second-bar > div img,
 .top-bar img,
 .people > img,
@@ -185,12 +215,15 @@ body {
 .avatar > img:hover,
 .glyphs img:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 15px rgba(0, 170, 0, 0.5);
+  box-shadow: 0 4px 15px rgba(0, 170, 0, 50%);
 }
+/*styling second image of avatar (2nd div of inside first-bar  )container*/
 .avatar > img + img {
   width: 2.5vw;
   height: 2.5vw;
 }
+
+/*styling heading of avatar*/
 .avatar > h2 {
   text-shadow:
     0 0 3px #00ff00,
@@ -198,14 +231,20 @@ body {
   color: rgb(0, 170, 0);
   font-size: calc(0.5rem + 0.8vw);
 }
+
+/*giving height and width to avatar img though responsive isn't to be considered trying to make it responsive*/
 .avatar > img,
 .search > img {
   width: 1.5vw;
   height: 1.5vw;
 }
+
+/*search div of first-row of topbar*/
 .search {
   flex: 1;
 }
+
+/*styilng second row of topbar*/
 .second-bar {
   flex-shrink: 1;
   display: flex;
@@ -218,21 +257,28 @@ body {
   align-items: center;
   text-wrap: nowrap;
 }
+/*giving height and width to img of second bar (second row to top bar) though responsive isn't to be considered trying to make it responsive*/
 .second-bar > div img {
   width: max(5vw, 50%);
   height: max(4vw, 40px);
 }
+
+/*styling  div which contains text "Hi there,Satoru Gojo (@gojo) "*/
 .second-bar > div > div {
   display: flex;
   flex-direction: column;
   justify-content: start;
   padding: 0;
 }
+
+/*styling Hi there (giving them shadow for hacking feel)*/
 .second-bar > div > div > p {
   text-shadow:
     0 0 3px #00ff00,
     0 0 1px #00ff00;
 }
+
+/*styling text Sator Gojo*/
 .second-bar p + p {
   font-size: calc(1rem + 0.5vw);
   font-weight: 800;
@@ -240,18 +286,23 @@ body {
     0 0 3px #00ff00,
     0 0 1px #00ff00;
 }
+
+/*styling navbar(second div of 2nd row of top-bar)*/
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-around;
   gap: 10px;
 }
+
 .navbar button {
   font-size: calc(1rem - 15%);
   border-radius: 8px;
   width: max(50px, 5vw);
   height: max(20px, 2vw);
 }
+
+/*contians heading "Your Projects" and "Trending" giving them display flex so that they align on same row at same level */
 .row2 {
   display: flex;
   align-items: center;
@@ -260,15 +311,17 @@ body {
   font-weight: 900;
   font-size: calc(1rem + 0.5vw);
   justify-content: space-between;
-}
-.row2 {
   text-shadow:
     0 0 3px #00ff00,
     0 0 1px #00ff00;
 }
+
+/*/*2nd div of second row which is heading "Trending" to make it shift a bit mroe left so that it aligns with extra secition vertically*/
 .row2 > div + div {
   flex-basis: 24%;
 }
+
+/*styling news and status of people*/
 .extra {
   padding: 5%;
   grid-row: 3/4;
@@ -277,6 +330,8 @@ body {
   display: grid;
   grid-template-rows: auto auto;
 }
+
+/*Styling news section*/
 .info {
   display: grid;
   padding-left: 10px;
@@ -299,6 +354,8 @@ body {
 .info > div {
   padding: 5px;
 }
+
+/*styling project section */
 .projects {
   padding: 1%;
   grid-row: 3/4;
@@ -306,11 +363,15 @@ body {
   display: grid;
   grid-template-rows: auto;
 }
+
+/*container which contains projects card*/
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2%;
 }
+
+/*This is styling each project card adding animations to them on hover as well*/
 .projects-grid > div {
   transition:
     background-color 0.3s ease,
@@ -321,16 +382,22 @@ body {
   border-radius: 5px;
   display: flex;
 }
+
+/*Styling heading of each projects*/
 .projects-grid > div p {
   font-family: spacegrotest, Arial, Helvetica, sans-serif;
   font-weight: 800;
 }
+
+/*This is div inside project grid of which contains, heading , info and glyphs are direct children*/
 .projects-grid > div > div + div {
   display: grid;
   grid-template-rows: auto 1fr auto;
   gap: 10px;
   padding: 10px;
 }
+
+/*contains fork , star and eye icon for each project , clicking on it will redirect to that projects source code and live if available*/
 .glyphs {
   display: flex;
   justify-content: flex-end;
@@ -341,21 +408,29 @@ body {
   width: 1.2vw;
   cursor: pointer;
 }
+
+/*info about each project*/
 .para {
   font-family: spacegrotesk, Arial, Helvetica, sans-serif;
 }
+
+/*styling first div of extra section */
 .trending {
   gap: 2%;
   display: grid;
   grid-row: auto 1fr;
 }
+
+/*heading which contains trending*/
 .trending > p {
   text-shadow:
     0 0 3px #00ff00,
     0 0 1px #00ff00;
-  font-size:1.5rem;
+  font-size: 1.5rem;
   font-weight: 900;
 }
+
+/*each individual div which contains trending users avatar and another div which contains uesrname and funny status for them*/
 .people {
   display: flex;
   gap: 10%;
@@ -408,7 +483,7 @@ button:hover {
   background-color: rgb(0, 170, 0);
   color: black;
 }
-.coloredline {
+.coloreddiv {
   height: 100%;
   width: 20px;
   border: 2px solid rgb(0, 170, 0);
@@ -422,7 +497,7 @@ button:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 50%);
 }
-.projects-grid > div:hover .coloredline {
+.projects-grid > div:hover .coloreddiv {
   background-color: black;
 }
 .sidebar-top:hover,
@@ -437,6 +512,8 @@ button:hover {
 body {
   font-family: handleregular, Arial, Helvetica, sans-serif;
 }
+
+/*setting font for all headings that i can remember of cuold be repetition as well */
 .sidebar,
 .second-bar,
 .row2,
@@ -444,6 +521,8 @@ body {
 .projects-grid > div > p {
   font-family: handleregular, Arial, Helvetica, sans-serif;
 }
+
+/*setting fonts for all info related things */
 .people > div > p + p,
 .para,
 .info > div > div {
